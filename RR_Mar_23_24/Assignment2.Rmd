@@ -9,7 +9,10 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 library(reticulate)
 library(chron)
+library(ggplot2)
+load("../Data/queens.RData")
 #py_install("pandas")
+
 ```
 
 ---
@@ -23,6 +26,7 @@ Then create a short report (you can copy the content from Wikipedia or other pag
 
 (do a commit after each step!)
 
+# BRIEF DESCRIPTION  
 1. A brief description of the show (use _italics_ for names).
 https://en.wikipedia.org/wiki/The_Queen%27s_Gambit_(miniseries)
 
@@ -32,19 +36,46 @@ Netflix released *The Queen's Gambit* on October 23, 2020. After four weeks it h
 
 *The Queen's Gambit* won eleven Primetime Emmy Awards, including Outstanding Limited or Anthology Series, becoming the first show on a streaming service to win the category.[5] The series also won two Golden Globe Awards: Best Limited Series or Television Film and Best Actress – Miniseries or Television Film for *Taylor-Joy*. She also won the Screen Actors Guild Award for Outstanding Performance by a Female Actor in a Miniseries or Television Movie.
 
+# PHOTO 
 2. A photo with the logo or a shot from the show itself.
 ![alt text here](C:/Users/Laura Eflor/OneDrive\Documents/GitHub\RRcourse2022/RR_Mar_23_24/The_Queens_Gambit.png)
-
+# SUMMARY STATISTIC
 3. A summary of some basic statistics (e.g. on viewership or ratings).
+```{r viewers_plot}
+plot(queens$viewers, type="l", col="red", lwd=7, xlab = "Episode 1-7", ylab = "Viewers")
+```
 
+# GRAPH OF VIEWSHIP
 4. A graph of the viewership over time.
 
+# GRAPH OF EPISODE 
 5. A graph of the episode-to-episode (or season-to-season) changes in viewership.
+
+```{r}
+episode1 <- 2000
+episode2 <- 3000
+episode3 <- 4000
+episode4 <- 5000
+episode5 <- 6000
+episode6 <- 7000
+episode7 <- 8000
+episodes <- c(episode1, episode2, episode3, episode4, episode5, episode6, episode7)
+
+hist(episodes, 
+     main="Histogram for Air Passengers", 
+     xlab="Passengers", 
+     border="blue", 
+     col="green",
+     xlim=c(100,700),
+     las=1, 
+     breaks=5)
+```
 
 6. A short description of the observed changes that includes inline references to numbers (e.g. the viewership decreased by `insert_calculated_number` between seasons 3 and 5).
 
 7. Make sure your report looks nice -> this time we're mostly interested in the output and not necessarily the codes used to achieve it.
 7. `knitr` your report and save it in the relevant folder (RR_Mar_30_31) of your repo. 
+
 8. Commit the changes and push them to Github.
 
 ### Some other chunk options
