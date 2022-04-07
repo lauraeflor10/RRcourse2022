@@ -33,6 +33,7 @@ Netflix released *The Queen's Gambit* on October 23, 2020. After four weeks it h
 *The Queen's Gambit* won eleven Primetime Emmy Awards, including Outstanding Limited or Anthology Series, becoming the first show on a streaming service to win the category.[5] The series also won two Golden Globe Awards: Best Limited Series or Television Film and Best Actress – Miniseries or Television Film for *Taylor-Joy*. She also won the Screen Actors Guild Award for Outstanding Performance by a Female Actor in a Miniseries or Television Movie.
 
 2. A photo with the logo or a shot from the show itself.
+![alt text here](C:/Users/Laura Eflor/OneDrive\Documents/GitHub\RRcourse2022/RR_Mar_23_24/The_Queens_Gambit.png)
 
 3. A summary of some basic statistics (e.g. on viewership or ratings).
 
