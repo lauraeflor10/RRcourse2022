@@ -22,3 +22,45 @@ for fizzbuzz in range(101):
         print("buzz")
         continue
     print(fizzbuzz)
+
+## Exercise 2
+
+"""
+1. Write a function which takes *n* (float or integer) as a parameter and returns the largest Fibonacci number smaller than *n*. 
+The function should be documented, with type hints, and appropriate comments.
+2. Write a function which reverses digits in an integer number (for example 7245 -> 5427). 
+The function should be documented, with type hints, and appropriate comments.
+"""
+
+## Exercise 2 - 1
+def fibonacci(n):
+    if n == 1 or n == 2:
+        return 1
+    return fibonacci(n - 1) + fibonacci(n - 2)
+
+
+N = 45  # random number
+result = []
+smallest = 1
+for i in range(1, N + 1):
+    term = fibonacci(i)
+    if term < N:
+        result.append(fibonacci(i))
+    else:
+        smallest = term
+        break
+
+print(*result)
+print('smallest value greater than N:', smallest)
+
+## Exercise 2 - 2
+
+digit = 85723
+reversed_digit = 0
+
+while digit != 0:
+    digitrev = digit % 10
+    reversed_digit = reversed_digit * 10 + digitrev
+    digit //= 10
+
+print("Reversed Number: " + str(reversed_digit))
