@@ -64,3 +64,24 @@ while digit != 0:
     digit //= 10
 
 print("Reversed Number: " + str(reversed_digit))
+
+## Exercise 3
+
+"""Write names of all US states in UPPERCASE and lowercase to a file. 
+Write how to do this without typing all 50 names manually. Separate code from input and from output.
+"""
+# Exercise 3 - Uppercase
+import pandas as pd
+
+df = pd.read_excel(r'C:\Users\Laura Eflor\OneDrive\Documents\GitHub\RRcourse2022\RR_Apr_20_21\USState.xlsx')
+df['State'] = df['State'].str.upper()
+
+print(df)
+
+# Exercise 3 - lowercase
+import pandas as pd
+
+df = pd.read_excel(r'C:\Users\Laura Eflor\OneDrive\Documents\GitHub\RRcourse2022\RR_Apr_20_21\USState.xlsx')
+df['State'] = df['State'].str.lower()
+
+print(df)
